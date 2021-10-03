@@ -98,11 +98,3 @@ func GetCountryCapital(country string) (string, error) {
 	}
 	return result, nil
 }
-
-// func main() {
-// 	result, err := GetCountryIsoCodes("NIGERIA")
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-// 	fmt.Println(result)
-// }
