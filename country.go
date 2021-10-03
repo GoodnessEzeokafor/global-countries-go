@@ -1,4 +1,4 @@
-package countries
+package country
 
 import (
 	"errors"
@@ -12,7 +12,7 @@ import (
  * @returns all the countries
  */
 func Countries() []countries.Country {
-	return countries.Countries()
+	return countries.AllCountries()
 }
 
 /*
@@ -24,7 +24,7 @@ func GetCountryCallCode(country string) (string, error) {
 		return "", errors.New("invalid country")
 	}
 	var result string
-	countries := countries.Countries()
+	countries := countries.AllCountries()
 	for i := 0; i < len(countries); i++ {
 		if countries[i].Country == strings.ToLower(country) {
 			result = countries[i].Code
@@ -45,7 +45,7 @@ func GetCountryFlag(country string) (string, error) {
 		return "", errors.New("invalid country")
 	}
 	var result string
-	countries := countries.Countries()
+	countries := countries.AllCountries()
 	for i := 0; i < len(countries); i++ {
 		if countries[i].Country == strings.ToLower(country) {
 			result = countries[i].Flag
@@ -66,7 +66,7 @@ func GetCountryIsoCodes(country string) (string, error) {
 		return "", errors.New("invalid country")
 	}
 	var result string
-	countries := countries.Countries()
+	countries := countries.AllCountries()
 	for i := 0; i < len(countries); i++ {
 		if countries[i].Country == strings.ToLower(country) {
 			result = countries[i].Isocodes
@@ -87,7 +87,7 @@ func GetCountryCapital(country string) (string, error) {
 		return "", errors.New("invalid country")
 	}
 	var result string
-	countries := countries.Countries()
+	countries := countries.AllCountries()
 	for i := 0; i < len(countries); i++ {
 		if countries[i].Country == strings.ToLower(country) {
 			result = countries[i].Capital

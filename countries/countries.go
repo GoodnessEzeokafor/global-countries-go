@@ -15,7 +15,7 @@ type Country struct {
 	Flag     string
 }
 
-func Countries() []Country {
+func AllCountries() []Country {
 	jsonFile, err := os.Open("countries.json")
 	if err != nil {
 		fmt.Println(err)
