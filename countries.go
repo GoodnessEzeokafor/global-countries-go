@@ -1812,3 +1812,4 @@ func GetCountryCapital(country string) (string, error) {
 	}
 	return result, nil
 }
+
